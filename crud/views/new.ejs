@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Usuario</title>
+        <meta charset="utf-8">
+        <link href='/stylesheet/style.css' rel="stylesheet">
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <p>Preencha os dados abaixo para salvar o cliente.</p>
+
+        <form action="<%=action%>"  method="POST">
+            <p>
+                <label>Nome:
+                    <input type="text" name="nome" value="<%= doc.nome %>" placeholder="Digite seu nome"/>
+                </label>
+            </p>
+            <p>
+                <label>Idade:
+                    <input type="number" name="idade" value="<%= doc.idade %>" placeholder="Digite sua idade"/>
+                </label>
+            </p>
+            <p>
+                <label>uf:
+                    <select name= "uf">
+                        <% const s = "selected" %>
+                        <option <% if(doc.uf === "RS") {%><%= s %> <% } %>>RS</option>
+                        <option <% if(doc.uf === "PE") {%><%= s %> <% } %>>PE</option>
+                        <option <% if(doc.uf === "MG") {%><%= s %> <% } %>>MG</option>
+                        <option <% if(doc.uf === "MT") {%><%= s %> <% } %>>MT</option>
+                        <option <% if(doc.uf === "MS") {%><%= s %> <% } %>>MS</option>
+                        <option <% if(doc.uf === "PR") {%><%= s %> <% } %>>PR</option>
+                        <option <% if(doc.uf === "SC") {%><%= s %> <% } %>>SC</option>
+                        <option <% if(doc.uf === "DF") {%><%= s %> <% } %>>DF</option>
+                        <option <% if(doc.uf === "PB") {%><%= s %> <% } %>>PB</option>
+                        <option <% if(doc.uf === "AL") {%><%= s %> <% } %>>AL</option>
+                        <option <% if(doc.uf === "AC") {%><%= s %> <% } %>>AC</option>
+                        <option <% if(doc.uf === "TO") {%><%= s %> <% } %>>TO</option>
+                        <option <% if(doc.uf === "PI") {%><%= s %> <% } %>>PI</option>
+                        <option <% if(doc.uf === "MA") {%><%= s %> <% } %>>MA</option>
+                        <option <% if(doc.uf === "SE") {%><%= s %> <% } %>>SE</option>
+                        <option <% if(doc.uf === "RR") {%><%= s %> <% } %>>RR</option>
+                        <option <% if(doc.uf === "RO") {%><%= s %> <% } %>>RO</option>
+                        <option <% if(doc.uf === "RN") {%><%= s %> <% } %>>RN</option>
+                        <option <% if(doc.uf === "CE") {%><%= s %> <% } %>>CE</option>
+                        <option <% if(doc.uf === "SP") {%><%= s %> <% } %>>SP</option>
+                        <option <% if(doc.uf === "RJ") {%><%= s %> <% } %>>RJ</option>
+                        <option <% if(doc.uf === "ES") {%><%= s %> <% } %>>ES</option>
+                        <option <% if(doc.uf === "AM") {%><%= s %> <% } %>>AM</option>
+                    </select>
+                <label>
+            </p>
+            <p>
+                <a href="/" >Cancelar</a> |
+                <input type="submit" value="Salvar"/>
+            </p>
+        </form>
+    </body>
+</html>

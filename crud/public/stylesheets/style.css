@@ -1,0 +1,39 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table {
+  width:50%;
+}
+
+thead{
+  background-color: #CCC;
+}
+
+thead > tr:first-child > td:first-child{
+  width: 50%;
+  /* background-color: blue; */
+}
+thead > tr:first-child > td:nth-child(2){
+  width: 15%;
+  /* background-color: red; */
+}
+
+thead > tr:first-child > td:nth-child(3){
+  width: 15%;
+  /* background-color: tomato; */
+}
+tbody > tr > td{
+  
+  column-span: 4px;
+}
+
+tfoot > tr > td{
+  
+  column-span: 4px;
+}
